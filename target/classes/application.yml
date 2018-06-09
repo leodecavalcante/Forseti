@@ -1,0 +1,14 @@
+---
+spring:
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:1433/maps
+    username: postgres
+    password: 210995
+
+googleApi:
+  geoCoding:
+    urlBegin: https://maps.googleapis.com/maps/api/geocode/json?address=
+    urlEnd: &key=
+  key: AIzaSyCAXlFSrxi2e8j8wfwFr5Jj-o0a2Kug5x8
