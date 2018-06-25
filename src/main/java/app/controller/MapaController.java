@@ -19,13 +19,12 @@ public class MapaController {
     private MapaService mapaService;
 
     @RequestMapping(value = "set/latlng", method = RequestMethod.GET)
-    public String populateLatLng(){
+    public void populateLatLng(){
         log.info("Iniciando processo para popular banco");
         try {
-            return mapaService.populateLatLng();
+            mapaService.populateLatLng();
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-            return "Algum erro foi encontrado.";
         }
     }
 }

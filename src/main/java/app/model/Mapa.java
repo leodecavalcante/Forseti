@@ -123,10 +123,13 @@ public class Mapa {
     private String sel;
 
     @Column(name="LATITUDE")
-    private String latitude;
+    private Double latitude;
 
     @Column(name="LONGITUDE")
-    private String longitude;
+    private Double longitude;
+
+    public Mapa() {
+    }
 
     public Mapa(String reg_adm, String org_set_origem, String num_mapoteca, String gaveta_mapoteca, String prancha_mapoteca, String titulo_mapa_planta, String endereco_mapa_planta_antigo, String bairro_mapa_planta_antigo, String municipio_uf_antigo, String cep_mapa_planta_antigo, String endereco_mapa_planta_novo, String bairro_mapa_planta_novo, String municipio_uf_novo, String cep_mapa_planta_novo, String tipologia_mapa_planta, String trecho_tipologia, String municipio_tipologia, String num_processo_tipologia, String supervisor_origem_tipologia, String org_emissor_origem_tipologia, String dimensao_imovel_area_total_tipologia, String confrontamento_tipologia, String autor_tipologia, String original_copia_tipologia, String data_tipologia, String escala, String num_folha, String descritores, String planta, String armario, String tela, String tubo, String quant, String observacao, String data_cadastramento, String cadastrador, String sel) {
         this.reg_adm = reg_adm;
@@ -166,6 +169,48 @@ public class Mapa {
         this.data_cadastramento = data_cadastramento;
         this.cadastrador = cadastrador;
         this.sel = sel;
+    }
+
+    public Mapa(String reg_adm, String org_set_origem, String num_mapoteca, String gaveta_mapoteca, String prancha_mapoteca, String titulo_mapa_planta, String endereco_mapa_planta_antigo, String bairro_mapa_planta_antigo, String municipio_uf_antigo, String cep_mapa_planta_antigo, String endereco_mapa_planta_novo, String bairro_mapa_planta_novo, String municipio_uf_novo, String cep_mapa_planta_novo, String tipologia_mapa_planta, String trecho_tipologia, String municipio_tipologia, String num_processo_tipologia, String supervisor_origem_tipologia, String org_emissor_origem_tipologia, String dimensao_imovel_area_total_tipologia, String confrontamento_tipologia, String autor_tipologia, String original_copia_tipologia, String data_tipologia, String escala, String num_folha, String descritores, String planta, String armario, String tela, String tubo, String quant, String observacao, String data_cadastramento, String cadastrador, String sel, Double latitude, Double longitude) {
+        this.reg_adm = reg_adm;
+        this.org_set_origem = org_set_origem;
+        this.num_mapoteca = num_mapoteca;
+        this.gaveta_mapoteca = gaveta_mapoteca;
+        this.prancha_mapoteca = prancha_mapoteca;
+        this.titulo_mapa_planta = titulo_mapa_planta;
+        this.endereco_mapa_planta_antigo = endereco_mapa_planta_antigo;
+        this.bairro_mapa_planta_antigo = bairro_mapa_planta_antigo;
+        this.municipio_uf_antigo = municipio_uf_antigo;
+        this.cep_mapa_planta_antigo = cep_mapa_planta_antigo;
+        this.endereco_mapa_planta_novo = endereco_mapa_planta_novo;
+        this.bairro_mapa_planta_novo = bairro_mapa_planta_novo;
+        this.municipio_uf_novo = municipio_uf_novo;
+        this.cep_mapa_planta_novo = cep_mapa_planta_novo;
+        this.tipologia_mapa_planta = tipologia_mapa_planta;
+        this.trecho_tipologia = trecho_tipologia;
+        this.municipio_tipologia = municipio_tipologia;
+        this.num_processo_tipologia = num_processo_tipologia;
+        this.supervisor_origem_tipologia = supervisor_origem_tipologia;
+        this.org_emissor_origem_tipologia = org_emissor_origem_tipologia;
+        this.dimensao_imovel_area_total_tipologia = dimensao_imovel_area_total_tipologia;
+        this.confrontamento_tipologia = confrontamento_tipologia;
+        this.autor_tipologia = autor_tipologia;
+        this.original_copia_tipologia = original_copia_tipologia;
+        this.data_tipologia = data_tipologia;
+        this.escala = escala;
+        this.num_folha = num_folha;
+        this.descritores = descritores;
+        this.planta = planta;
+        this.armario = armario;
+        this.tela = tela;
+        this.tubo = tubo;
+        this.quant = quant;
+        this.observacao = observacao;
+        this.data_cadastramento = data_cadastramento;
+        this.cadastrador = cadastrador;
+        this.sel = sel;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public int getCod_mapa_planta() {
@@ -472,19 +517,19 @@ public class Mapa {
         this.sel = sel;
     }
 
-    public String getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
